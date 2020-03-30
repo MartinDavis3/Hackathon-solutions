@@ -29,7 +29,7 @@ var johnBudget = new PersonalBudget( 'John', 25, 3000 );
 var jillBudget = new PersonalBudget( 'Jill', 47, 5650 );
 var jeffBudget = new PersonalBudget( 'Jeff', 68, 1625 );
 
-console.log( 'Sum of Peoples Budgets' )
+console.log( 'Sum of Peoples Budgets' );
 console.log( johnBudget );
 console.log( jillBudget );
 console.log( jeffBudget );
@@ -94,16 +94,35 @@ hydrogen = new ChemElement( 'hydrogen', 'H', 1.00784, 6.075E-09 );
 carbon = new ChemElement( 'carbon', 'C', 12.0096, 3.333E-07 );
 
 
-console.log( 'Object to Array' )
+console.log( 'Object to Array' );
 
-console.log( 'hydrogen object:', hydrogen )
+console.log( 'hydrogen object:', hydrogen );
 
 var hArray = objectToArray( hydrogen );
 console.log( 'hydrogen object as array:', hArray );
 
-console.log( 'carbon object:', carbon )
+console.log( 'carbon object:', carbon );
 
 var cMap = objectToMap( carbon );
 console.log( 'carbon object as map:', cMap );
 
+console.log();
+
+
+// Index Multiplier
+// https://edabit.com/challenge/3Efavz8YmSBia4p8s
+
+const reducingFunction = ( acc, val, ind ) => (acc + ind * val);
+
+// Initial value of 0 used to ensure empty array returns 0 rather than an error
+// and also starts index at zero, rather than 1.
+const indexMultiplier = ( anArray) => anArray.reduce( reducingFunction, 0 );
+
+console.log( 'Index Multiplier' );
+var testArrayOne = [ 1, 2, 3 ];
+console.log( testArrayOne, ' gives: ', indexMultiplier( testArrayOne ) );
+var testArrayTwo = [];
+console.log( testArrayTwo, ' gives: ', indexMultiplier( testArrayTwo ) );
+var testArrayThree = [ 23, -4, 1, 2 ];
+console.log( testArrayThree, ' gives: ', indexMultiplier( testArrayThree ) );
 console.log();
